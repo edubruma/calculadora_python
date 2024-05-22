@@ -1,7 +1,7 @@
 while True:
     # Usuário Informa os números
-    x = str(input('Informe o primeiro número')).replace('.','.')
-    y = str(input('Informe o segundo número')).replace('.','.')
+    x = str(input('Informe o primeiro número ')).replace('.','.')
+    y = str(input('Informe o segundo número ')).replace('.','.')
 
     # Converter para números decimais
     x = float(x)
@@ -21,14 +21,24 @@ while True:
         case '+':
             print(f'A soma é: {x + y}.')
         case '-':
-            print(f'A subtração é: {x + y}.')
+            print(f'A subtração é: {x - y}.')
         case '*':
-            print(f'A multiplicação é: {x + y}.')
+            print(f'A multiplicação é: {x * y}.')
         case '/':
-            print(f'A divisão é: {x + y}.')
+            print(f'A divisão é: {x / y}.')
         case '%':
-            print(f'O resto da divisão é: {x + y}.')
+            print(f'O resto da divisão é: {x % y}.')
         case _:
             print('Operação invalida')
             continue
 
+    # pergunta para o usuário se deseja continuar ou encerrar
+    continuar = input('Deseja continuar (s/n)')
+
+    # Verifica a opção do usuário
+    if continuar == 's':
+        continue
+    elif continuar == 'n':
+        break
+    else:
+        print('Opção invalida')
